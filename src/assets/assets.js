@@ -1,0 +1,11 @@
+export {default as Logo} from "./Logo.svg";
+export {default as LogoSm} from "./LogoSm.svg";
+export {default as bg} from "./bg.png"
+export {default as BannerOne} from "./bannerOne.png"
+export {default as imgOne} from "./imgOne.png"
+export {default as imgTwo} from "./imgTwo.png"
+export {default as imgThree} from "./imgThree.png"
+export {default as imgFour} from "./imgFour.png"
+export {default as imgFive} from "./imgFive.png"
+export {default as imgSeven} from "./imgSeven.png"
+export {default as hrishabh} from "./hrishabh.jpeg"

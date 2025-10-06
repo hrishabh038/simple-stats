@@ -1,0 +1,60 @@
+import React from "react";
+import { Glow, SectionHeading, Typewriter } from "../components/components";
+import { KeyFeaturesData } from "../metadata/metadata";
+import { FiCheckCircle } from "react-icons/fi"; // Optional icon
+import { Words } from "../metadata/metadata";
+
+const KeyFeatures = () => {
+  return (
+    <SectionHeading
+      heading="Key Features"
+      className="w-full flex flex-col gap-12 px-1"
+    >
+      <div
+        data-aos="zoom-in"
+        className="group relative border border-gray-300 dark:border-gray-700 w-full bg-white dark:bg-gray-800 py-8 rounded-md shadow-inner"
+      >
+        <div className="max-w-4xl mx-auto text-center text-gray-600 dark:text-gray-400 font-medium">
+          <Typewriter words={Words} />
+        </div>
+        <Glow />
+      </div>
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-1">
+        {KeyFeaturesData.map((item, index) => (
+          <Feature
+            index={index}
+            title={item.title}
+            description={item.description}
+            key={item.title}
+          />
+        ))}
+      </div>
+    </SectionHeading>
+  );
+};
+
+const Feature = ({ title, description, index }) => {
+  return (
+    <div
+      data-aos="zoom-in"
+      data-aos-delay={index * 50}
+      className="border border-gray-300 dark:border-gray-700 group relative overflow-hidden rounded-lg p-6 bg-white dark:bg-gray-800 shadow-md transition-all duration-300 hover:shadow-xl hover:scale-[1.02] hover:z-50"
+    >
+      <div className="flex items-center gap-3">
+        <div className="text-blue-600 dark:text-blue-400 text-2xl">
+          <FiCheckCircle />
+        </div>
+        <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-100">
+          {title}
+        </h3>
+      </div>
+      <p className="mt-2 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+        {description}
+      </p>
+
+      <Glow />
+    </div>
+  );
+};
+
+export default KeyFeatures;
