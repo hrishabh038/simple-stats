@@ -19,14 +19,14 @@ function App() {
   };
 
   return (
-    <div className="p-8 bg-gray-50 min-h-screen font-sans">
+    <div className="p-8 bg-neutral-50 min-h-screen font-sans">
       <h1 className="text-3xl font-bold mb-8 te">
         Custom Button Component
       </h1>
 
       {/* Solid Variant */}
       <div className="mb-8">
-        <h2 className="text-xl font-semibold mb-4 text-gray-700">
+        <h2 className="text-xl font-semibold mb-4 text-neutral-700">
           Solid Variant
         </h2>
         <div className="flex items-center flex-wrap gap-4">
@@ -53,7 +53,7 @@ function App() {
 
       {/* Outline Variant */}
       <div className="mb-8">
-        <h2 className="text-xl font-semibold mb-4 text-gray-700">
+        <h2 className="text-xl font-semibold mb-4 text-neutral-700">
           Outline Variant
         </h2>
         <div className="flex items-center flex-wrap gap-4">
@@ -80,7 +80,7 @@ function App() {
 
       {/* Ghost Variant */}
       <div className="mb-8">
-        <h2 className="text-xl font-semibold mb-4 text-gray-700">
+        <h2 className="text-xl font-semibold mb-4 text-neutral-700">
           Ghost Variant
         </h2>
         <div className="flex items-center flex-wrap gap-4">
@@ -107,7 +107,7 @@ function App() {
 
       {/* States */}
       <div className="mb-8">
-        <h2 className="text-xl font-semibold mb-4 text-gray-700">
+        <h2 className="text-xl font-semibold mb-4 text-neutral-700">
           Button States
         </h2>
         <div className="flex items-center flex-wrap gap-4">

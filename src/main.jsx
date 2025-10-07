@@ -9,7 +9,7 @@ import Routing from "./pages/Routing.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
-      <div className="bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-200">
+      <div className="bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200">
         <Navbar />
         <div className="p-[75px] px-4 flex justify-center overflow-auto">
           <div className="w-[1000px]">

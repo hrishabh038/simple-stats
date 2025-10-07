@@ -12,9 +12,9 @@ const KeyFeatures = () => {
     >
       <div
         data-aos="zoom-in"
-        className="group relative border border-gray-300 dark:border-gray-700 w-full bg-white dark:bg-gray-800 py-8 rounded-md shadow-inner"
+        className="group relative border border-neutral-300 dark:border-neutral-700 w-full bg-white dark:bg-neutral-800 py-8 rounded-md shadow-inner"
       >
-        <div className="max-w-4xl mx-auto text-center text-gray-600 dark:text-gray-400 font-medium">
+        <div className="max-w-4xl mx-auto text-center text-neutral-600 dark:text-neutral-400 font-medium">
           <Typewriter words={Words} />
         </div>
         <Glow />
@@ -38,17 +38,17 @@ const Feature = ({ title, description, index }) => {
     <div
       data-aos="zoom-in"
       data-aos-delay={index * 50}
-      className="border border-gray-300 dark:border-gray-700 group relative overflow-hidden rounded-lg p-6 bg-white dark:bg-gray-800 shadow-md transition-all duration-300 hover:shadow-xl hover:scale-[1.02] hover:z-50"
+      className="border border-neutral-300 dark:border-neutral-700 group relative overflow-hidden rounded-lg p-6 bg-white dark:bg-neutral-800 shadow-md transition-all duration-300 hover:shadow-xl hover:scale-[1.02] hover:z-50"
     >
       <div className="flex items-center gap-3">
         <div className="text-blue-600 dark:text-blue-400 text-2xl">
           <FiCheckCircle />
         </div>
-        <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-100">
+        <h3 className="text-lg font-semibold text-neutral-700 dark:text-neutral-100">
           {title}
         </h3>
       </div>
-      <p className="mt-2 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+      <p className="mt-2 text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed">
         {description}
       </p>
 

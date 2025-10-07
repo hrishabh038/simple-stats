@@ -34,7 +34,7 @@ const Banner = () => {
           <p className="text-3xl sm:text-4xl font-bold">
             The Fastest, Privacy-First Analytics for Modern Websites
           </p>
-          <p className="text-lg sm:text-xl text-gray-500 md:text-justify">
+          <p className="text-lg sm:text-xl text-neutral-500 md:text-justify">
             Ditch complex, intrusive web analytics for Fathom - a better Google
             Analytics alternative. Experience ease of use, forever data
             retention, and complete, worry-free GDPR compliance - all while

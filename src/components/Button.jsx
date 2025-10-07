@@ -57,7 +57,7 @@ const Button = ({
   const variantStyles = {
     solid: {
       primary: "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500",
-      secondary: "bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500",
+      secondary: "bg-neutral-600 text-white hover:bg-neutral-700 focus:ring-neutral-500",
       success:
         "bg-green-600 text-white hover:bg-green-700 focus:ring-green-500",
       danger: "bg-red-600 text-white hover:bg-red-700 focus:ring-red-500",
@@ -69,7 +69,7 @@ const Button = ({
       primary:
         "border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white focus:ring-blue-500",
       secondary:
-        "border border-gray-600 text-gray-600 hover:bg-gray-600 hover:text-white focus:ring-gray-500",
+        "border border-neutral-600 text-neutral-600 hover:bg-neutral-600 hover:text-white focus:ring-neutral-500",
       success:
         "border border-green-600 text-green-600 hover:bg-green-600 hover:text-white focus:ring-green-500",
       danger:
@@ -81,7 +81,7 @@ const Button = ({
     },
     ghost: {
       primary: "text-blue-600 hover:bg-blue-100 focus:ring-blue-500",
-      secondary: "text-gray-600 hover:bg-gray-100 focus:ring-gray-500",
+      secondary: "text-neutral-600 hover:bg-neutral-100 focus:ring-neutral-500",
       success: "text-green-600 hover:bg-green-100 focus:ring-green-500",
       danger: "text-red-600 hover:bg-red-100 focus:ring-red-500",
       error: "text-red-600 hover:bg-red-100 focus:ring-red-500",

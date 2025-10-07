@@ -94,7 +94,7 @@ const SolarSystem = ({
         {/* Sun */}
         <div
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
-                   rounded-full bg-yellow-400 text-gray-900 font-semibold
+                   rounded-full bg-yellow-400 text-neutral-900 font-semibold
                    flex items-center justify-center text-center shadow-lg shadow-yellow-400/40
                    select-none"
           style={{
@@ -111,7 +111,7 @@ const SolarSystem = ({
           <div
             key={`orbit-${idx}`}
             className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
-                      rounded-full border border-dashed border-gray-400 dark:border-gray-700 
+                      rounded-full border border-dashed border-neutral-400 dark:border-neutral-700 
                       pointer-events-none ${
                         idx % 2
                           ? "animate-[spin_90s_linear_infinite_reverse]"

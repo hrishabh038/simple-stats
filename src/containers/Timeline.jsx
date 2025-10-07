@@ -1,5 +1,6 @@
 import React from "react";
 import SectionHeading from "../components/SectionHeading";
+import {Glow} from "../components/components";
 
 // Helper function to format the date
 const formatDate = (dateString) => {
@@ -16,10 +17,10 @@ const TimelineItem = ({ event, index }) => {
   const isLeft = index % 2 === 0;
 
   const Card = () => (
-    <div data-aos={isLeft?("fade-left"): "fade-right"} className="relative bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md border border-gray-300 dark:border-gray-700 w-full">
+    <div data-aos={isLeft?("fade-left"): "fade-right"} className="group relative bg-white dark:bg-neutral-800 p-4 rounded-lg shadow-md border border-neutral-300 dark:border-neutral-700 w-full">
       {/* Arrow Pointer - adapts its position and border for left/right and dark/light modes */}
       <div
-        className={`absolute top-6 w-3 h-3 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 transform rotate-45 
+        className={`absolute top-6 w-3 h-3 bg-white dark:bg-neutral-800 border-neutral-200 dark:border-neutral-700 transform rotate-45 
                     md:${
                       isLeft
                         ? "right-0 -translate-y-1/2 translate-x-1/2 border-t border-r"
@@ -32,10 +33,10 @@ const TimelineItem = ({ event, index }) => {
       <div className="flex">
         {/* Main Content */}
         <div className="flex-grow pr-4">
-          <h3 className="font-bold text-lg text-gray-800 dark:text-gray-100">
+          <h3 className="font-bold text-lg text-neutral-800 dark:text-neutral-100">
             {event.title}
           </h3>
-          <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+          <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-1">
             {event.description}
           </p>
 
@@ -55,14 +56,15 @@ const TimelineItem = ({ event, index }) => {
         </div>
 
         {/* Date Section */}
-        <div className="flex-shrink-0 text-center border-l border-gray-200 dark:border-gray-600 pl-4">
-          <p className="text-gray-500 dark:text-gray-400 text-sm">{month}</p>
-          <p className="font-bold text-3xl text-gray-800 dark:text-gray-100">
+        <div className="flex-shrink-0 text-center border-l border-neutral-200 dark:border-neutral-600 pl-4">
+          <p className="text-neutral-500 dark:text-neutral-400 text-sm">{month}</p>
+          <p className="font-bold text-3xl text-neutral-800 dark:text-neutral-100">
             {day}
           </p>
-          <p className="text-gray-500 dark:text-gray-400 text-sm">{year}</p>
+          <p className="text-neutral-500 dark:text-neutral-400 text-sm">{year}</p>
         </div>
       </div>
+      <Glow />
     </div>
   );
 
@@ -80,8 +82,8 @@ const TimelineItem = ({ event, index }) => {
       </div>
 
       {/* Centerline and Dot */}
-      <div className="relative w-1 flex-shrink-0 bg-gray-300 dark:bg-gray-600">
-        <div className="absolute top-7 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-blue-500 border-4 border-white dark:border-gray-900"></div>
+      <div className="relative w-1 flex-shrink-0 bg-neutral-300 dark:bg-neutral-600">
+        <div className="absolute top-7 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-blue-500 border-4 border-white dark:border-neutral-900"></div>
       </div>
 
       {/* Right side content or spacer, hidden on mobile */}
@@ -102,7 +104,7 @@ const Timeline = ({ events }) => {
   return (
     <SectionHeading
       heading={"Our Timeline"}
-      className={" dark:bg-gray-900 min-h-screen py-12 px-4 sm:px-6 lg:px-8"}
+      className={" dark:bg-neutral-900 min-h-screen py-12 px-4 sm:px-6 lg:px-8"}
     >
       <div className="max-w-md md:max-w-3xl mx-auto">
         <div className="relative">

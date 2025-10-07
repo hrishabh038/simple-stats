@@ -9,13 +9,13 @@ const JoinTheWaitListForm = () => {
       <div className="absolute w-[85px] bottom-0 z-10 right-[-25px] md:left-[-44px]">
         <img src={BannerOne} alt="" />
       </div>
-      <form className="group relative flex w-full max-w-sm flex-col gap-4 rounded-md shadow border-2 border-blue-300 dark:border-blue-500 p-6 bg-white dark:bg-gray-800">
+      <form className="group relative flex w-full max-w-sm flex-col gap-4 rounded-md shadow border-2 border-blue-300 dark:border-blue-500 p-6 bg-white dark:bg-neutral-800">
         {/* 1. Improved Typography and Hierarchy */}
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-700 dark:text-white">
+          <h2 className="text-2xl font-bold text-neutral-700 dark:text-white">
             Get Early Access
           </h2>
-          <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+          <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
             Join the waitlist to be the first to know when we launch.
           </p>
         </div>

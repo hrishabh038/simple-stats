@@ -15,7 +15,7 @@ const Inputarea = ({
   return (
     <div className={`flex flex-col gap-1 ${className}`}>
       {label && (
-        <label htmlFor={id} className="text-sm font-semibold text-gray-500">
+        <label htmlFor={id} className="text-sm font-semibold text-neutral-500">
           {label}
         </label>
       )}
@@ -29,16 +29,16 @@ const Inputarea = ({
         disabled={disabled}
         autoFocus={autoFocus}
         className={`
-          border border-gray-300 dark:border-gray-600
-          bg-white dark:bg-gray-800
-          text-gray-700 dark:text-gray-100
-          placeholder-gray-500 dark:placeholder-gray-400
+          border border-neutral-300 dark:border-neutral-600
+          bg-white dark:bg-neutral-800
+          text-neutral-700 dark:text-neutral-100
+          placeholder-neutral-500 dark:placeholder-neutral-400
           px-4 py-2
           rounded-lg 
           outline-none 
           focus:ring-2 focus:ring-blue-500 focus:border-transparent
           transition-all duration-200
-          hover:border-gray-400 dark:hover:border-gray-500
+          hover:border-neutral-400 dark:hover:border-neutral-500
           ${disabled ? "opacity-50 cursor-not-allowed" : ""}
         `}
       />
