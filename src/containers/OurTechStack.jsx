@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import SectionHeading from "../components/SectionHeading";
-import { metadata } from "../metadata/metadata";
+import { waitlistPageData } from "../metadata/waitlistPageData";
 
 // Random int inclusive
 const randInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
@@ -84,7 +84,7 @@ const OurTechStack = ({
 
   return (
     // Use inline width/height to avoid Tailwind JIT missing arbitrary values
-    <SectionHeading heading={metadata.sectionHeadings.ourTechStack.title}>
+    <SectionHeading heading={waitlistPageData.sectionHeadings.ourTechStack.title}>
       <div
         className="relative mx-auto flex items-center justify-center"
         style={{

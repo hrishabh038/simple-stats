@@ -9,7 +9,7 @@ import {
 } from "../containers/containers";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { metadata } from "../metadata/metadata";
+import { waitlistPageData } from "../metadata/waitlistPageData";
 
 const Waitlist = () => {
   useEffect(() => {
@@ -32,7 +32,7 @@ const Waitlist = () => {
       </section>
 
       <section data-aos="zoom-in" className="w-full">
-        <OurTechStack words={metadata.techStack} sunText="Tech Stack" />
+        <OurTechStack words={waitlistPageData.techStack} sunText="Tech Stack" />
       </section>
 
       {/* Founders Section */}

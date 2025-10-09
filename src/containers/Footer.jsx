@@ -2,7 +2,7 @@ import React from "react";
 import { JoinTheWaitListForm } from "../forms/forms";
 import { BrandLogo } from "../components/components";
 import { FaTwitter, FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
-import { metadata } from "../metadata/metadata";
+import { waitlistPageData } from "../metadata/waitlistPageData";
 
 const Footer = () => {
   return (
@@ -17,17 +17,17 @@ const Footer = () => {
               <BrandLogo />
             </div>
             <div className="text-lg sm:text-xl text-center md:text-start text-neutral-500">
-              {metadata.footer.description}
+              {waitlistPageData.footer.description}
             </div>
             <ul className="flex gap-6 w-fit">
-              {metadata.footer.links.map((item, index) => (
+              {waitlistPageData.footer.links.map((item, index) => (
                 <li className="text-neutral-500 cursor-pointer hover:text-blue-500">
                   {item.title}
                 </li>
               ))}
             </ul>
             <ul className="flex gap-3 w-fit text-2xl">
-              {metadata.footer.socialMediaHandles.map((item, index) => {
+              {waitlistPageData.footer.socialMediaHandles.map((item, index) => {
                 const Icon = item.icon;
                 return (
                   <li
@@ -45,7 +45,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-center h-[75px] flex items-center justify-center px-4 text-neutral-500 border-t border-neutral-300 dark:border-neutral-700">
-          {metadata.footer.catchPhrase}
+          {waitlistPageData.footer.catchPhrase}
         </div>
       </div>
     </footer>

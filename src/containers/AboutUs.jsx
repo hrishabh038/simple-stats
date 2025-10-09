@@ -1,19 +1,19 @@
 import React from "react";
 import { Glow, SectionHeading } from "../components/components";
-import { metadata } from "../metadata/metadata";
+import { waitlistPageData } from "../metadata/waitlistPageData";
 
 const AboutUs = () => {
   return (
-    <SectionHeading heading={metadata.sectionHeadings.aboutUs.title} className={"flex flex-col gap-12"}>
+    <SectionHeading heading={waitlistPageData.sectionHeadings.aboutUs.title} className={"flex flex-col gap-12"}>
       <div className="text-lg sm:text-xl text-center">
-        {metadata.aboutUs.description}
+        {waitlistPageData.aboutUs.description}
       </div>
       <div className="flex flex-col gap-6">
         <div className="text-neutral-400 font-bold text-center">
-          {metadata.sectionHeadings.aboutUs.subSection.title.toUpperCase()}
+          {waitlistPageData.sectionHeadings.aboutUs.subSection.title.toUpperCase()}
         </div>
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {metadata.aboutUs.team.map((member, index) => (
+          {waitlistPageData.aboutUs.team.map((member, index) => (
             <FounderCard
               key={index}
               image={member.img}

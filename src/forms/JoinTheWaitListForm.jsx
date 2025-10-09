@@ -1,7 +1,7 @@
 import React from "react";
 import { Inputarea, Button, Glow } from "../components/components";
 import { BannerOne } from "../assets/assets";
-import { metadata } from "../metadata/metadata";
+import { waitlistPageData } from "../metadata/waitlistPageData";
 
 const JoinTheWaitListForm = () => {
   return (
@@ -14,37 +14,37 @@ const JoinTheWaitListForm = () => {
         {/* 1. Improved Typography and Hierarchy */}
         <div className="text-center">
           <h2 className="text-2xl font-bold text-neutral-700 dark:text-white">
-            {metadata.forms.joinTheWaitListForm.heading}
+            {waitlistPageData.forms.joinTheWaitListForm.heading}
           </h2>
           <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
-            {metadata.forms.joinTheWaitListForm.subHeading}
+            {waitlistPageData.forms.joinTheWaitListForm.subHeading}
           </p>
         </div>
 
         {/* 2. Inputs remain clean and simple */}
         <div className="flex flex-col gap-4">
           <Inputarea
-            label={metadata.forms.joinTheWaitListForm.name.label}
-            placeholder={metadata.forms.joinTheWaitListForm.name.placeholder}
+            label={waitlistPageData.forms.joinTheWaitListForm.name.label}
+            placeholder={waitlistPageData.forms.joinTheWaitListForm.name.placeholder}
           />
           <Inputarea
-            label={metadata.forms.joinTheWaitListForm.email.label}
-            placeholder={metadata.forms.joinTheWaitListForm.email.placeholder}
-            type={metadata.forms.joinTheWaitListForm.email.type}
+            label={waitlistPageData.forms.joinTheWaitListForm.email.label}
+            placeholder={waitlistPageData.forms.joinTheWaitListForm.email.placeholder}
+            type={waitlistPageData.forms.joinTheWaitListForm.email.type}
           />
           <Inputarea
-            label={metadata.forms.joinTheWaitListForm.phone.label}
-            placeholder={metadata.forms.joinTheWaitListForm.phone.placeholder}
+            label={waitlistPageData.forms.joinTheWaitListForm.phone.label}
+            placeholder={waitlistPageData.forms.joinTheWaitListForm.phone.placeholder}
           />
         </div>
 
         {/* 3. A stronger, more prominent Call-to-Action */}
         <Button
-          variant={metadata.forms.joinTheWaitListForm.submit.variant}
-          colorScheme={metadata.forms.joinTheWaitListForm.submit.colorScheme}
+          variant={waitlistPageData.forms.joinTheWaitListForm.submit.variant}
+          colorScheme={waitlistPageData.forms.joinTheWaitListForm.submit.colorScheme}
           className="mt-2 w-full py-3 text-base font-semibold"
         >
-          {metadata.forms.joinTheWaitListForm.submit.label}
+          {waitlistPageData.forms.joinTheWaitListForm.submit.label}
         </Button>
 
         <Glow />

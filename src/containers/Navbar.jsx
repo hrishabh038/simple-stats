@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrandLogo, ThemeToogle } from "../components/components";
-import { metadata } from "../metadata/metadata";
+import { waitlistPageData } from "../metadata/waitlistPageData";
 import { twMerge } from "tailwind-merge";
 import { IoMdClose } from "react-icons/io";
 import { RiMenu3Fill } from "react-icons/ri";
@@ -19,7 +19,7 @@ const Navbar = () => {
           </div>
           {/* <MainMenu /> */}
           <ul className="hidden sm:flex items-center gap-3">
-            {metadata.navbar.map((item, index) => (
+            {waitlistPageData.navbar.map((item, index) => (
               <li
                 className={twMerge(
                   " cursor-pointer rounded px-2 py-1 hover:text-blue-600 font-medium",
@@ -65,7 +65,7 @@ const Sidenav = ({ handleClick }) => {
         </div>
         {/* Main Menu */}
         <ul className="flex flex-col gap-2 px-4">
-          {metadata.navbar.map((item, index) => (
+          {waitlistPageData.navbar.map((item, index) => (
             <li
               className={twMerge(
                 " cursor-pointer rounded px-2 py-1 hover:text-blue-600 font-medium dark:text-neutral-200",

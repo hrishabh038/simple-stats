@@ -1,7 +1,7 @@
 import React from "react";
 import SectionHeading from "../components/SectionHeading";
 import { Glow } from "../components/components";
-import { metadata } from "../metadata/metadata";
+import { waitlistPageData } from "../metadata/waitlistPageData";
 
 // Helper function to format the date
 const formatDate = (dateString) => {
@@ -99,14 +99,14 @@ const TimelineItem = ({ event, index }) => {
 const OurTimeline = () => {
   return (
     <SectionHeading
-      heading={metadata.sectionHeadings.ourTimeline.title}
+      heading={waitlistPageData.sectionHeadings.ourTimeline.title}
       className={" dark:bg-neutral-900 min-h-screen py-12 px-4 sm:px-6 lg:px-8"}
     >
       <div className="max-w-md md:max-w-3xl mx-auto">
         <div className="relative">
           {/* The vertical line is now part of the TimelineItem for better mobile alignment */}
           <div className="space-y-12">
-            {metadata.timelineData.map((event, index) => (
+            {waitlistPageData.timelineData.map((event, index) => (
               <TimelineItem key={index} event={event} index={index} />
             ))}
           </div>

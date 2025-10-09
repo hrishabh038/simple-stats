@@ -1,8 +1,8 @@
 import React from "react";
-import { metadata } from "../metadata/metadata";
+import { waitlistPageData } from "../metadata/waitlistPageData";
 
 const BrandLogo = () => {
-  return <img className="w-full h-full" src={metadata.logo} />;
+  return <img className="w-full h-full" src={waitlistPageData.logo} />;
 };
 
 export default BrandLogo;

@@ -11,7 +11,7 @@ import {
 
 import { FaTwitter, FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 
-export const metadata = {
+export const waitlistPageData = {
   logo: Logo,
   navbar: [
     {
@@ -32,7 +32,7 @@ export const metadata = {
       title: "Key features",
     },
     ourTechStack: {
-      title: "Our tech stack"
+      title: "Our tech stack",
     },
     aboutUs: {
       title: "About us",
