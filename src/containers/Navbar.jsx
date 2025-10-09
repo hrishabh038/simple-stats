@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrandLogo, ThemeToogle } from "../components/components";
-import { MainMenuData } from "../metadata/metadata";
+import { metadata } from "../metadata/metadata";
 import { twMerge } from "tailwind-merge";
 import { IoMdClose } from "react-icons/io";
 import { RiMenu3Fill } from "react-icons/ri";
@@ -19,13 +19,13 @@ const Navbar = () => {
           </div>
           {/* <MainMenu /> */}
           <ul className="hidden sm:flex items-center gap-3">
-            {MainMenuData.map((item) => (
+            {metadata.navbar.map((item, index) => (
               <li
                 className={twMerge(
                   " cursor-pointer rounded px-2 py-1 hover:text-blue-600 font-medium",
                   item.active && "bg-blue-600 text-neutral-200 hover:text-neutral-200"
                 )}
-                key={item.id}
+                key={index}
               >
                 {item.title}
               </li>
@@ -65,13 +65,13 @@ const Sidenav = ({ handleClick }) => {
         </div>
         {/* Main Menu */}
         <ul className="flex flex-col gap-2 px-4">
-          {MainMenuData.map((item) => (
+          {metadata.navbar.map((item, index) => (
             <li
               className={twMerge(
                 " cursor-pointer rounded px-2 py-1 hover:text-blue-600 font-medium dark:text-neutral-200",
                 item.active && "bg-blue-600 text-neutral-200 hover:text-neutral-200"
               )}
-              key={item.id}
+              key={index}
             >
               {item.title}
             </li>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Inputarea, Button, Glow } from "../components/components";
 import { BannerOne } from "../assets/assets";
+import { metadata } from "../metadata/metadata";
 
 const JoinTheWaitListForm = () => {
   return (
@@ -13,34 +14,37 @@ const JoinTheWaitListForm = () => {
         {/* 1. Improved Typography and Hierarchy */}
         <div className="text-center">
           <h2 className="text-2xl font-bold text-neutral-700 dark:text-white">
-            Get Early Access
+            {metadata.forms.joinTheWaitListForm.heading}
           </h2>
           <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
-            Join the waitlist to be the first to know when we launch.
+            {metadata.forms.joinTheWaitListForm.subHeading}
           </p>
         </div>
 
         {/* 2. Inputs remain clean and simple */}
         <div className="flex flex-col gap-4">
-          <Inputarea label="Full Name" placeholder="e.g., Jane Doe" />
           <Inputarea
-            label="Email Address"
-            placeholder="you@example.com"
-            type="email"
+            label={metadata.forms.joinTheWaitListForm.name.label}
+            placeholder={metadata.forms.joinTheWaitListForm.name.placeholder}
           />
           <Inputarea
-            label="Phone Number (Optional)"
-            placeholder="+1 (555) 123-4567"
+            label={metadata.forms.joinTheWaitListForm.email.label}
+            placeholder={metadata.forms.joinTheWaitListForm.email.placeholder}
+            type={metadata.forms.joinTheWaitListForm.email.type}
+          />
+          <Inputarea
+            label={metadata.forms.joinTheWaitListForm.phone.label}
+            placeholder={metadata.forms.joinTheWaitListForm.phone.placeholder}
           />
         </div>
 
         {/* 3. A stronger, more prominent Call-to-Action */}
         <Button
-          variant="solid"
-          colorScheme="primary"
+          variant={metadata.forms.joinTheWaitListForm.submit.variant}
+          colorScheme={metadata.forms.joinTheWaitListForm.submit.colorScheme}
           className="mt-2 w-full py-3 text-base font-semibold"
         >
-          Notify Me When You Launch
+          {metadata.forms.joinTheWaitListForm.submit.label}
         </Button>
 
         <Glow />

@@ -1,8 +1,8 @@
 import React from "react";
-import { Logo } from "../assets/assets";
+import { metadata } from "../metadata/metadata";
 
 const BrandLogo = () => {
-  return <img className="w-full h-full" src={Logo} />;
+  return <img className="w-full h-full" src={metadata.logo} />;
 };
 
 export default BrandLogo;

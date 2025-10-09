@@ -1,5 +1,6 @@
 import React, { useMemo } from "react";
 import SectionHeading from "../components/SectionHeading";
+import { metadata } from "../metadata/metadata";
 
 // Random int inclusive
 const randInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
@@ -23,7 +24,7 @@ const shuffle = (arr) => {
  * - minPerOrbit?: number (default 1)
  * - maxPerOrbit?: number (default 8)
  */
-const SolarSystem = ({
+const OurTechStack = ({
   words = [],
   sunText = "Core",
   minOrbits = 4,
@@ -83,7 +84,7 @@ const SolarSystem = ({
 
   return (
     // Use inline width/height to avoid Tailwind JIT missing arbitrary values
-    <SectionHeading heading={"Out tech stack"}>
+    <SectionHeading heading={metadata.sectionHeadings.ourTechStack.title}>
       <div
         className="relative mx-auto flex items-center justify-center"
         style={{
@@ -160,4 +161,4 @@ const SolarSystem = ({
   );
 };
 
-export default SolarSystem;
+export default OurTechStack;

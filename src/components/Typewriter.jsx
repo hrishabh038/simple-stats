@@ -12,7 +12,10 @@ const Typewriter = ({
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
+  // ✅ Early exit if no words
   useEffect(() => {
+    if (!Array.isArray(words) || words.length === 0) return;
+
     const currentWord = words[wordIndex % words.length];
     let timeout;
 
@@ -43,6 +46,10 @@ const Typewriter = ({
     deletingSpeed,
     pauseTime,
   ]);
+
+  if (!Array.isArray(words) || words.length === 0) {
+    return null; // or return fallback text
+  }
 
   return (
     <span

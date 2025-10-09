@@ -1,13 +1,12 @@
 import React from "react";
 import { Glow, SectionHeading, Typewriter } from "../components/components";
-import { KeyFeaturesData } from "../metadata/metadata";
 import { FiCheckCircle } from "react-icons/fi"; // Optional icon
-import { Words } from "../metadata/metadata";
+import { metadata } from "../metadata/metadata";
 
 const KeyFeatures = () => {
   return (
     <SectionHeading
-      heading="Key Features"
+      heading={metadata.sectionHeadings.keyFeatures.title}
       className="w-full flex flex-col gap-12 px-1"
     >
       <div
@@ -15,12 +14,12 @@ const KeyFeatures = () => {
         className="group relative border border-neutral-300 dark:border-neutral-700 w-full bg-white dark:bg-neutral-800 py-8 rounded-md shadow-inner"
       >
         <div className="max-w-4xl mx-auto text-center text-neutral-600 dark:text-neutral-400 font-medium">
-          <Typewriter words={Words} />
+          <Typewriter words={metadata.typewriter.wordsSetOne} />
         </div>
         <Glow />
       </div>
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-1">
-        {KeyFeaturesData.map((item, index) => (
+        {metadata.KeyFeatures.map((item, index) => (
           <Feature
             index={index}
             title={item.title}

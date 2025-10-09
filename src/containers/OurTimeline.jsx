@@ -1,6 +1,7 @@
 import React from "react";
 import SectionHeading from "../components/SectionHeading";
-import {Glow} from "../components/components";
+import { Glow } from "../components/components";
+import { metadata } from "../metadata/metadata";
 
 // Helper function to format the date
 const formatDate = (dateString) => {
@@ -17,19 +18,10 @@ const TimelineItem = ({ event, index }) => {
   const isLeft = index % 2 === 0;
 
   const Card = () => (
-    <div data-aos={isLeft?("fade-left"): "fade-right"} className="group relative bg-white dark:bg-neutral-800 p-4 rounded-lg shadow-md border border-neutral-300 dark:border-neutral-700 w-full">
-      {/* Arrow Pointer - adapts its position and border for left/right and dark/light modes */}
-      <div
-        className={`absolute top-6 w-3 h-3 bg-white dark:bg-neutral-800 border-neutral-200 dark:border-neutral-700 transform rotate-45 
-                    md:${
-                      isLeft
-                        ? "right-0 -translate-y-1/2 translate-x-1/2 border-t border-r"
-                        : "left-0 -translate-y-1/2 -translate-x-1/2 border-b border-l"
-                    }
-                    left-0 -translate-y-1/2 -translate-x-1/2 border-b border-l md:border-b-0 md:border-l-0
-                  `}
-      />
-
+    <div
+      data-aos={isLeft ? "fade-left" : "fade-right"}
+      className="group relative bg-white dark:bg-neutral-800 p-4 rounded-lg shadow-md border border-neutral-300 dark:border-neutral-700 w-full"
+    >
       <div className="flex">
         {/* Main Content */}
         <div className="flex-grow pr-4">
@@ -57,11 +49,15 @@ const TimelineItem = ({ event, index }) => {
 
         {/* Date Section */}
         <div className="flex-shrink-0 text-center border-l border-neutral-200 dark:border-neutral-600 pl-4">
-          <p className="text-neutral-500 dark:text-neutral-400 text-sm">{month}</p>
+          <p className="text-neutral-500 dark:text-neutral-400 text-sm">
+            {month}
+          </p>
           <p className="font-bold text-3xl text-neutral-800 dark:text-neutral-100">
             {day}
           </p>
-          <p className="text-neutral-500 dark:text-neutral-400 text-sm">{year}</p>
+          <p className="text-neutral-500 dark:text-neutral-400 text-sm">
+            {year}
+          </p>
         </div>
       </div>
       <Glow />
@@ -100,17 +96,17 @@ const TimelineItem = ({ event, index }) => {
   );
 };
 
-const Timeline = ({ events }) => {
+const OurTimeline = () => {
   return (
     <SectionHeading
-      heading={"Our Timeline"}
+      heading={metadata.sectionHeadings.ourTimeline.title}
       className={" dark:bg-neutral-900 min-h-screen py-12 px-4 sm:px-6 lg:px-8"}
     >
       <div className="max-w-md md:max-w-3xl mx-auto">
         <div className="relative">
           {/* The vertical line is now part of the TimelineItem for better mobile alignment */}
           <div className="space-y-12">
-            {events.map((event, index) => (
+            {metadata.timelineData.map((event, index) => (
               <TimelineItem key={index} event={event} index={index} />
             ))}
           </div>
@@ -120,4 +116,4 @@ const Timeline = ({ events }) => {
   );
 };
 
-export default Timeline;
+export default OurTimeline;

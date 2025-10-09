@@ -1,35 +1,28 @@
 import React from "react";
 import { Glow, SectionHeading } from "../components/components";
-import { hrishabh } from "../assets/assets";
+import { metadata } from "../metadata/metadata";
 
 const AboutUs = () => {
   return (
-    <SectionHeading heading="Who are we?" className={"flex flex-col gap-12"}>
+    <SectionHeading heading={metadata.sectionHeadings.aboutUs.title} className={"flex flex-col gap-12"}>
       <div className="text-lg sm:text-xl text-center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores et
-        assumenda, quos eius in modi beatae vitae dolorum quod commodi sapiente
-        reprehenderit iusto provident obcaecati sunt nemo dolorem praesentium,
-        libero, quasi alias. Tempora iure incidunt, neque eum sit nobis modi
-        quo. Ducimus reprehenderit perferendis, sequi sapiente eligendi
+        {metadata.aboutUs.description}
       </div>
       <div className="flex flex-col gap-6">
         <div className="text-neutral-400 font-bold text-center">
-          {"Meet the team".toUpperCase()}
+          {metadata.sectionHeadings.aboutUs.subSection.title.toUpperCase()}
         </div>
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <FounderCard
-            name="Aman Pandey"
-            role="Software Engineer"
-            company="Company"
-            description={`Aman is a passionate software engineer with deep interest in building scalable systems and writing clean code. He believes in continuous learning and teamwork to drive innovation.`}
-          />
-          <FounderCard
-            image={hrishabh}
-            name="Hrishabh Jain"
-            role="Product Engineer"
-            company="LTIMindtree"
-            description={`Hrishabh specializes in product development and user experience. With a keen eye for detail, he blends design with code to create meaningful user interfaces.`}
-          />
+          {metadata.aboutUs.team.map((member, index) => (
+            <FounderCard
+              key={index}
+              image={member.img}
+              name={member.name}
+              role={member.designation}
+              company={member.company}
+              description={member.description}
+            />
+          ))}
         </div>
       </div>
     </SectionHeading>
@@ -53,7 +46,11 @@ const FounderCard = ({ name, role, company, description, image }) => {
       {/* Avatar */}
       <div className="flex flex-col items-center gap-4">
         {image ? (
-          <img className="w-[100px] h-[100px] rounded-full" src={image} alt="" />
+          <img
+            className="w-[100px] h-[100px] rounded-full"
+            src={image}
+            alt=""
+          />
         ) : (
           <div className="w-[100px] h-[100px] rounded-full bg-blue-100 dark:bg-neutral-700 flex items-center justify-center text-2xl font-bold text-blue-500 dark:text-blue-300 shadow-md">
             {getInitials(name)}
