@@ -9,15 +9,12 @@ const Routing = () => {
     // <Suspense fallback={<PageLoader />}>
     <Routes>
       {/* <Route path="*" element={<NotFound />} /> */}
-
       {/* <Route path="/auth/login" element={<Login />} /> */}
       {/* <Route path="/auth/register" element={<Register />} /> */}
-
-      <Route path="/" element={<Navigate to="/waitlist-page" replace />} />
-      <Route path="waitlist-page" element={<Waitlist />} />
-
-      <Route path="comp-test" element={<App />} />
-
+      {/* <Route path="/" element={<Navigate to="/waitlist-page" replace />} />
+      <Route path="waitlist-page" element={<Waitlist />} /> */}
+      <Route path="/" element={<Waitlist />} />
+      <Route path="/comp-test" element={<App />} />
       {/* <Route path="/jobs" element={<Navigate to="/jobs/listing" replace />} />
       <Route path="jobs" element={<Jobs />}>
         <Route path="listing" element={<JobsListing />} />
