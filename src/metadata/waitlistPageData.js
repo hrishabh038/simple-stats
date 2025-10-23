@@ -6,13 +6,17 @@ import {
   imgThree,
   imgTwo,
   hrishabh,
-  Logo,
 } from "../assets/assets";
 
-import { FaTwitter, FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
+import {
+  FaTwitter,
+  FaInstagram,
+  FaLinkedin,
+  FaFacebook,
+  FaGithub,
+} from "react-icons/fa";
 
 export const waitlistPageData = {
-  logo: Logo,
   navbar: [
     {
       title: "Home",
@@ -45,73 +49,92 @@ export const waitlistPageData = {
     },
   },
   banner: {
-    heading: "The Fastest, Privacy-First Analytics for Modern Websites",
-    description: `Ditch complex, intrusive web analytics for Fathom - a better Google Analytics alternative. Experience ease of use, forever data retention, and complete, worry-free GDPR compliance - all while protecting your time and your visitors' digital privacy.`,
+    heading: "The Fastest, Privacy-First Analytics for the Modern Web",
+    subTagLine:
+      "Simple Beautiful insights, cookie-less analytics that tell the truth without tracking your visitors. ",
+    description: `Discover how your website performs without invading privacy. thegreatroadmap Analytics is a fast, ethical alternative to Google Analytics, 100% cookie-free, lightweight, and built for developers who care about compliance and speed.
+`,
     rollingImages: [imgOne, imgTwo, imgThree, imgFour, imgFive, imgSeven],
   },
 
   typewriter: {
     wordsSetOne: [
-      "GDPR compliant",
-      "Real-time dashboards",
-      "No cookies",
-      "Developer friendly",
-      "Funnel & goal tracking",
-      "Scroll depth",
-      "UTM performance",
-      "Live views",
-      "Team sharing",
+      "Cookie-Less Tracking",
+      "Anonymous Insights",
+      "Real-Time Dashboard",
+      "Custom Events",
+      "User Journey / Session Flow",
+      "UTM & Campaign Tracking",
+      "Scroll Depth & Engagement",
+      "Video Play/Pause Tracking",
+      "404 & Error Tracking",
+      "Device, Browser & Country Stats",
+      "Automatic Bot & Spam Filtering",
+      "Team Sharing & Roles",
+      "Web Vitals (Opt-In)",
+      "Ultra-Light Script (<1 KB)",
     ],
   },
   KeyFeatures: [
     {
-      title: "Cookie-less Tracking",
-      description:
-        "Track users without storing personal data or needing consent banners.",
+      title: "Cookie-Less Tracking",
+      description: "No cookies, no personal identifiers, fully anonymous.",
+    },
+    {
+      title: "Anonymous Insights",
+      description: "Understand visitors without invading their privacy.",
     },
     {
       title: "Real-Time Dashboard",
+      description: "See live visitors, top pages, and referrers instantly.",
+    },
+    {
+      title: "Custom Events",
+      description: "Track clicks, form submits, button taps, and more.",
+    },
+    {
+      title: "User Journey / Session Flow",
+      description: "Aggregate visitor paths for actionable insights.",
+    },
+    {
+      title: "UTM & Campaign Tracking",
       description:
-        "Instantly see your live traffic with accurate visitor counts.",
+        "Automatically group traffic by source, medium, and campaign.",
     },
     {
-      title: "Funnel & Goal Tracking",
-      description: "Create simple funnels and monitor conversions with ease.",
+      title: "Scroll Depth & Engagement",
+      description: "Know which sections capture attention.",
     },
     {
-      title: "Scroll Depth Tracking",
-      description:
-        "Know how far users scroll on each page and improve engagement.",
+      title: "Video Play/Pause Tracking",
+      description: "Works for YouTube & HTML5 videos.",
     },
     {
-      title: "UTM Campaign Analytics",
-      description:
-        "Measure how your marketing campaigns perform (email, ads, social).",
+      title: "404 & Error Tracking",
+      description: "Detect broken pages and error-heavy flows.",
     },
     {
-      title: "Lightweight Script (<1 KB)",
-      description: "Loads instantly. Won’t slow down your site.",
+      title: "Device, Browser & Country Stats",
+      description: "Quick snapshot of visitor tech and locations.",
     },
     {
-      title: "Developer Friendly API",
-      description:
-        "Easy to integrate with any modern framework. Built for hackers.",
+      title: "Automatic Bot & Spam Filtering",
+      description: "Only real human visits are counted.",
     },
     {
-      title: "Email & Slack Alerts",
-      description:
-        "Get notified of traffic spikes or goal completions instantly.",
+      title: "Team Sharing & Roles",
+      description: "Invite teammates, share dashboards, and control access.",
     },
     {
-      title: "Multi-Site & Team Access",
-      description:
-        "Share dashboards with your team. Manage multiple sites easily.",
+      title: "Web Vitals (Opt-In)",
+      description: "Track LCP, CLS, FID optionally.",
     },
     {
-      title: "GDPR + CCPA Compliant by Default",
-      description: "Zero headaches. Your users stay anonymous. Always.",
+      title: "Ultra-Light Script (<1 KB)",
+      description: "Tiny, async, and fast.",
     },
   ],
+
   techStack: [
     "React",
     "JavaScript",
@@ -174,8 +197,10 @@ export const waitlistPageData = {
     },
   ],
   aboutUs: {
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores et assumenda, quos eius in modi beatae vitae dolorum quod commodi sapiente reprehenderit iusto provident obcaecati sunt nemo dolorem praesentium, libero, quasi alias. Tempora iure incidunt, neque eum sit nobis modi quo. Ducimus reprehenderit perferendis, sequi sapiente eligendi",
+    description: `When we started our IndianWeddingBlogs.com, our goal was simple: share insights about Indian weddings and build a community of readers. Like many bloggers, we wanted to understand our audience and grow revenue through affiliate programs.
+We started with Google Analytics, but it quickly became frustrating: dashboards were slow, overwhelming, and hard to navigate. Setting up funnels, tracking affiliate clicks, or understanding reader behavior felt unnecessarily complicated. Plus, GA tracked personal identifiers and relied on cookies, which didn’t align with our values of respecting privacy.
+Next, we explored privacy-first tools like Simple Analytics, Fathom, Plausible, and Matomo. They were cleaner and more privacy-conscious, but still didn’t solve our problems:
+`,
     team: [
       {
         img: hrishabh,
@@ -196,7 +221,7 @@ export const waitlistPageData = {
   },
   footer: {
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore consectetur tempora quae recusandae impedit quibusdam illum atque saepe est, vero ipsam ut soluta nobis beatae voluptas, quisquam eos maiores quos accusamus! Iste ab modi incidunt, doloribus iusto obcaecati unde ipsa.",
+      "Discover how your website performs without invading privacy. thegreatroadmap Analytics is a fast, ethical alternative to Google Analytics — 100% cookie-free, lightweight, and built for developers who care about compliance and speed.",
     catchPhrase: "Made with ❤️ by indie hackers in India",
     links: [
       {
@@ -220,10 +245,7 @@ export const waitlistPageData = {
         icon: FaLinkedin,
       },
       {
-        icon: FaInstagram,
-      },
-      {
-        icon: FaFacebook,
+        icon: FaGithub,
       },
     ],
   },

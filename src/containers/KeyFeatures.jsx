@@ -43,7 +43,7 @@ const Feature = ({ title, description, index }) => {
         <div className="text-blue-600 dark:text-blue-400 text-2xl">
           <FiCheckCircle />
         </div>
-        <h3 className="text-lg font-semibold text-neutral-700 dark:text-neutral-100">
+        <h3 className="text-sm sm:text-[17px] font-semibold text-neutral-700 dark:text-neutral-100">
           {title}
         </h3>
       </div>

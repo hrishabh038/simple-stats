@@ -5,7 +5,6 @@ import {
   KeyFeatures,
   AboutUs,
   OurTimeline,
-  OurTechStack,
 } from "../containers/containers";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -29,10 +28,6 @@ const Waitlist = () => {
       {/* Key Features */}
       <section data-aos="fade-up" className="w-full">
         <KeyFeatures />
-      </section>
-
-      <section data-aos="zoom-in" className="w-full">
-        <OurTechStack words={waitlistPageData.techStack} sunText="Tech Stack" />
       </section>
 
       {/* Founders Section */}

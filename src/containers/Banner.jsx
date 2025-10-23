@@ -14,10 +14,15 @@ const Banner = () => {
     <div className="w-full">
       <div className="w-full flex flex-col md:flex-row justify-between gap-12">
         <div className=" w-full text-center md:text-left flex flex-col items-center md:items-start gap-4">
-          <p className="text-3xl sm:text-4xl font-bold">
-            {waitlistPageData.banner.heading}
-          </p>
-          <p className="text-lg sm:text-xl text-neutral-500 md:text-justify">
+          <div>
+            <p className="text-3xl sm:text-4xl font-bold text-blue-400">
+              {waitlistPageData.banner.heading}
+            </p>
+            <p className="text-sm sm:text-base ">
+              {waitlistPageData.banner.subTagLine}
+            </p>
+          </div>
+          <p className="text-base sm:text-lg text-neutral-500">
             {waitlistPageData.banner.description}
           </p>
           <div className="min-w-[350px] h-[40px]">

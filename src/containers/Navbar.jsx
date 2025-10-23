@@ -11,10 +11,8 @@ const Navbar = () => {
     <>
       <nav className=" z-40 fixed top-0 left-0 right-0 h-[75px] px-4 flex items-center justify-center border-b border-neutral-300 dark:border-neutral-800 bg-white dark:bg-neutral-900">
         <div className="w-[1000px] flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-[full] h-[28px]">
-              <BrandLogo />
-            </div>
+          <div className="flex items-center gap-6">
+            <BrandLogo />
             <ThemeToogle />
           </div>
           {/* <MainMenu /> */}
@@ -23,7 +21,8 @@ const Navbar = () => {
               <li
                 className={twMerge(
                   " cursor-pointer rounded px-2 py-1 hover:text-blue-600 font-medium",
-                  item.active && "bg-blue-600 text-neutral-200 hover:text-neutral-200"
+                  item.active &&
+                    "bg-blue-600 text-neutral-200 hover:text-neutral-200"
                 )}
                 key={index}
               >
@@ -69,7 +68,8 @@ const Sidenav = ({ handleClick }) => {
             <li
               className={twMerge(
                 " cursor-pointer rounded px-2 py-1 hover:text-blue-600 font-medium dark:text-neutral-200",
-                item.active && "bg-blue-600 text-neutral-200 hover:text-neutral-200"
+                item.active &&
+                  "bg-blue-600 text-neutral-200 hover:text-neutral-200"
               )}
               key={index}
             >
